@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal" @select="handleSelect"
+        <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal"
             background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router>
             <el-menu-item index="/OperateCa">日历表</el-menu-item>
             <el-menu-item index="/AllEvents">事件池</el-menu-item>
@@ -30,9 +30,6 @@
         data() {
             return {
             };
-        },
-        created() {
-            this.selected()
         },
         methods: {
             getUp() {
