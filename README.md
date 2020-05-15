@@ -59,8 +59,9 @@
  			axios vue-axios
  
 **安装依赖命令：**
- 			- cd front-end
- 			- npm install  element element-ui
+ 			cd front-end
+			
+ 			npm install  element element-ui
  				@antv/data-set @antv/g2
  				@fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid
  				@fullcalendar/interaction @fullcalendar/vue vue-fullcalendar
