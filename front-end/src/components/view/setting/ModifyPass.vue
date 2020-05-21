@@ -78,7 +78,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            post('/apis/index/index/repass', {
+            post('/index/index/repass', {
               password: this.ruleForm.password,
               newpassword: this.ruleForm.newpassword,
               repassword: this.ruleForm.repassword

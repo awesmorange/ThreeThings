@@ -50,7 +50,7 @@
     },
     methods: {
       getdata() {
-        get("/apis/index").then(res => {
+        get("index").then(res => {
           let mydata = res
           console.log(res)
           if(mydata.sex == 1){
