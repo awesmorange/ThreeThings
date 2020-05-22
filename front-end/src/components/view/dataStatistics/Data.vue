@@ -47,7 +47,7 @@
         created() {
             this.getUpBedData();
             this.getTimingData();
-            this.drawRedar();
+            //this.drawRedar();
         },
         methods: {
             getUpBedData() {
