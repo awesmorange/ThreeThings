@@ -137,7 +137,7 @@
         methods: {
             // 获取信息
             getEventsList(info) {
-                get('/apis/index/task/index')
+                get('/index/task/index')
                     .then((res) => {
                         var mydata = res.data.reverse()
                         this.eventList = mydata;
@@ -158,7 +158,7 @@
                 this.form = row;
             },
             saveEvent() {
-                post('/apis/index/task/add', this.form)
+                post('/index/task/add', this.form)
                     .then((res) => {
                         if (this.form.id === undefined || this.form.id == '') { //新增
                             this.form.id = res.data;
@@ -186,7 +186,7 @@
             },
             handleDelete(index, row) {
                 console.log(index, row);
-                post('/apis/index/task/del', { id: row.id })
+                post('/index/task/del', { id: row.id })
                     .then((res) => {
                         this.eventList.forEach((item, index, arr) => {
                             if (item.id == row.id) {

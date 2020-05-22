@@ -73,7 +73,7 @@
         },
         methods: {
             getdata() {
-                get("/apis/index").then(res => {
+                get("index").then(res => {
                     let mydata = res
                     console.log(mydata)
                     this.ruleForm.userName = mydata.name,
@@ -85,7 +85,7 @@
                 })
             },
             getDetail() {
-                get("/apis/index/user/infoconfig").then(res => {
+                get("/index/user/infoconfig").then(res => {
                     let mydata = res.data
                     this.sexData = mydata.sex
                     this.occData = mydata.occ
@@ -95,7 +95,7 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        post('/apis/index/index/editinfo', {
+                        post('/index/index/editinfo', {
                             sex: this.ruleForm.sex,
                             email: this.ruleForm.email,
                             occ: this.ruleForm.occupation,

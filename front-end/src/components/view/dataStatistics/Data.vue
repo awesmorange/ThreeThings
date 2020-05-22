@@ -51,7 +51,7 @@
         },
         methods: {
             getUpBedData() {
-                get('/apis/index/index/signlist')
+                get('/index/index/signlist')
                     .then((res) => {
                         let mydata = res.data.sort(res.data.day)
                         // 保留签到的时间点
@@ -80,7 +80,7 @@
                     });
             },
             getTimingData() {
-                get('/apis/index/index/timelist')
+                get('/index/index/timelist')
                     .then((res) => {
                         var mydata = res.data.sort(res.data.day)
                         var sum = 0

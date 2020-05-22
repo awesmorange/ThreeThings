@@ -122,7 +122,7 @@
             saveTiming() {
                 this.dialogVisible = false;
                 this.stop()
-                post('/apis/index/index/timeadd', 
+                post('/index/index/timeadd', 
                 {
                     title: this.form.title,
                     duration:this.form.time,

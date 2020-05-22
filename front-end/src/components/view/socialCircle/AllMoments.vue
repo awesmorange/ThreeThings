@@ -89,7 +89,7 @@
         var files = e.target.files[0];
         let formData = new FormData(uploadForm);
         formData.append('image', files);
-        this.$axios.post('/apis/index/user/uploadImg', formData)
+        this.$axios.post('/index/user/uploadImg', formData)
           .then((res) => {
             this.$message({
               message: res.data.msg,
@@ -100,13 +100,13 @@
           });
       },
       getMosList() {
-        get('/apis/index/moment/lists')
+        get('/index/moment/lists')
           .then((res) => {
             this.momentList = res.data.reverse();
           });
       },
       saveMoment() { //增加、修改
-        post('/apis/index/moment/add', this.form)
+        post('/index/moment/add', this.form)
           .then((res) => {
             this.$message({
               message: res.msg,
@@ -134,7 +134,7 @@
         this.form.id = item.id
       },
       delMo(id) {
-        post('/apis/index/moment/del', { id: id })
+        post('/index/moment/del', { id: id })
           .then((res) => {
             this.momentList.forEach((item, index, arr) => {
               if (item.id == id) {

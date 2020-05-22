@@ -93,7 +93,7 @@
                     start: info.activeStart,
                     end: info.activeEnd
                 };
-                get('/apis/index/task/index', params)
+                get('/index/task/index', params)
                     .then((res) => {
                         this.calendarEvents = res.data;
                     });
@@ -118,7 +118,7 @@
                 };
             },
             saveEvent() {
-                post('/apis/index/task/add', this.form)
+                post('/index/task/add', this.form)
                     .then((res) => {
                         if (this.form.id === undefined || this.form.id == '') { //新增
                             this.form.id = res.data;
@@ -145,7 +145,7 @@
             },
             //删除事件
             delEvent() {
-                post('/apis/index/task/del', { id: this.form.id })
+                post('/index/task/del', { id: this.form.id })
                     .then((res) => {
                         this.calendarEvents.forEach((item, index, arr) => {
                             if (item.id == this.form.id) {

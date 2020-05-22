@@ -33,7 +33,7 @@
         },
         methods: {
             getUp() {
-                post('/apis/index/index/sign', { type: 1, time: this.time })
+                post('/index/index/sign', { type: 1, time: this.time })
                     .then((res) => {
                         this.$message({
                             message: res.msg,
@@ -44,7 +44,7 @@
 
             },
             bed() {
-                post('/apis/index/index/sign', { type: 2, time: this.time })
+                post('/index/index/sign', { type: 2, time: this.time })
                     .then((res) => {
                         this.$message({
                             message: res.msg,

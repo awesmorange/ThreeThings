@@ -22,6 +22,7 @@
   import Header from '@/components/view/common/Header'
   import { get } from '@/axios/api'
   import { speakNow } from '@/utils/voice'
+  import { getKey } from '@/utils/store'
   export default {
     name: 'App',
     data() {
@@ -32,12 +33,14 @@
     components: {
       commonheader: Header
     },
-    created(){
+    create(){
+      let token = getKey('token')
+      if(!token) return false;
       this.getList()
     },
     methods: {
       getList() {
-        get('/apis/index/task/index')
+        get('/index/task/index')
           .then((res) => {
             var mydata = res.data
             this.list = mydata

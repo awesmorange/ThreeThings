@@ -87,7 +87,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            post('/apis/index/user/register', {
+            post('/index/user/register', {
               name: this.ruleForm.userName,
               password: this.ruleForm.password,
               wish: this.ruleForm.wish
