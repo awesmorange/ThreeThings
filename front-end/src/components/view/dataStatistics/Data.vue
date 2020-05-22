@@ -125,7 +125,7 @@
                     width: 450,
                     padding: [30, 30, 70, 30],//上,左,下,右
                 });
-                //console.log(data)
+
                 // 将数据传入表格
                 chart.data(data);
                 // 设置辅助线
@@ -252,8 +252,7 @@
     }
 
     #timing,
-    #star,
-    #redar{
+    #star{
         height: 400px;
         width: 450px;
         margin-bottom: 70px;
