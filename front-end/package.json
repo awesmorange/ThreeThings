@@ -19,7 +19,7 @@
     "@fullcalendar/interaction": "^4.4.0",
     "@fullcalendar/timegrid": "^4.4.0",
     "@fullcalendar/vue": "^4.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "element": "^0.1.4",
     "element-ui": "^2.13.1",
     "qs": "^6.9.3",
